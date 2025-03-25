@@ -12,7 +12,7 @@ const About = () => {
             <div className="relative">
               <div className="relative z-10 overflow-hidden rounded-2xl shadow-xl">
                 <img
-                  src="../../src/images/ceci.jpeg"
+                  src="images/ceci.jpeg"
                   alt="Terapeuta profissional"
                   className="w-full h-auto"
                 />
