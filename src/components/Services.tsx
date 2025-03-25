@@ -20,7 +20,7 @@ const services = [
     description: "Reduza inchaço e celulite com resultados imediatos.",
     duration: "60 min",
     price: "R$ 200",
-    image: "public/images/barriga.jpeg",
+    image: "../../src/images/barriga.jpeg",
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ const services = [
       "Defina sua silhueta com técnicas avançadas de modelagem corporal.",
     duration: "75 min",
     price: "R$ 180",
-    image: "public/images/barriga2.jpeg",
+    image: "../../src/images/barriga2.jpeg",
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const services = [
       "Pele hidratada e radiante, com uma massagem facial relaxante.",
     duration: "60 min",
     price: "R$ 150",
-    image: "public/images/pedra2.jpeg",
+    image: "../../src/images/pedra2.jpeg",
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ const services = [
       "Relaxamento completo antes do seu grande dia, com massagens, escalda pés e cuidados especiais.",
     duration: "120 min",
     price: "R$ 300",
-    image: "public/images/rosas.jpeg",
+    image: "../../src/images/rosas.jpeg",
   },
   {
     id: 5,
@@ -56,7 +56,7 @@ const services = [
       "Alívio das dores e cuidados com a pele, em um momento de conexão com você mesma.",
     duration: "75 min",
     price: "R$ 170",
-    image: "public/images/gestante.jpeg",
+    image: "../../src/images/gestante.jpeg",
   },
   {
     id: 6,
@@ -65,7 +65,7 @@ const services = [
       "Desintoxique seu corpo com esfoliação, massagem e manta térmica.",
     duration: "90 min",
     price: "R$ 220",
-    image: "public/images/janela.jpeg",
+    image: ".../../src/images/janela.jpeg",
   },
   {
     id: 7,
@@ -73,7 +73,7 @@ const services = [
     description: "Alivie tensões musculares e dores com técnicas específicas.",
     duration: "90 min",
     price: "R$ 200",
-    image: "public/images/bola.jpeg",
+    image: "../../src/images/bola.jpeg",
   },
 ];
 
