@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
-            <h5 className="font-serif text-2xl font-bold mb-4">Serenity</h5>
+            <h5 className="font-serif text-2xl font-bold mb-4"> Cecilia Lívia - Spa At home</h5>
             <p className="text-white/70 mb-4">
               Proporcionando experiências de bem-estar transformadoras através de massagens terapêuticas personalizadas.
             </p>
@@ -88,7 +88,7 @@ const Footer = () => {
         
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/50 text-sm">
-            &copy; {currentYear} Serenity. Todos os direitos reservados.
+            &copy; {currentYear}  Cecilia Lívia - Spa At home. Todos os direitos reservados.
           </p>
           <div className="mt-4 md:mt-0">
             <ul className="flex space-x-6 text-sm text-white/50">
