@@ -20,7 +20,7 @@ const services = [
     description: "Reduza inchaço e celulite com resultados imediatos.",
     duration: "60 min",
     price: "R$ 200",
-    image: "public/images/perna.jpeg",
+    image: "public/images/barriga.jpeg",
   },
   {
     id: 2,
@@ -47,7 +47,7 @@ const services = [
       "Relaxamento completo antes do seu grande dia, com massagens, escalda pés e cuidados especiais.",
     duration: "120 min",
     price: "R$ 300",
-    image: "public/images/janela.jpeg",
+    image: "public/images/rosas.jpeg",
   },
   {
     id: 5,
@@ -65,7 +65,7 @@ const services = [
       "Desintoxique seu corpo com esfoliação, massagem e manta térmica.",
     duration: "90 min",
     price: "R$ 220",
-    image: "public/images/rosas.jpeg",
+    image: "public/images/janela.jpeg",
   },
   {
     id: 7,
