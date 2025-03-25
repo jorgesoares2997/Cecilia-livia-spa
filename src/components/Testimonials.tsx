@@ -8,7 +8,6 @@ const testimonials = [
     role: "Cliente",
     quote:
       "A experiência foi incrível! Me senti renovada e com uma energia incrível após a drenagem. Cecília é uma verdadeira profissional.",
-    image: "https://randomuser.me/api/portraits/women/45.jpg",
   },
   {
     id: 2,
@@ -16,7 +15,6 @@ const testimonials = [
     role: "Noiva",
     quote:
       "O Spa da Noiva foi o momento de paz que eu precisava antes do meu casamento. A massagem e os cuidados foram maravilhosos!",
-    image: "https://randomuser.me/api/portraits/women/46.jpg",
   },
 
   {
@@ -25,7 +23,6 @@ const testimonials = [
     role: "Aventureiro",
     quote:
       "Depois de uma semana intensa de trilhas e esportes radicais, a sessão de relaxamento foi essencial para minha recuperação. Recomendo demais!",
-    image: "https://randomuser.me/api/portraits/men/49.jpg",
   },
 ];
 

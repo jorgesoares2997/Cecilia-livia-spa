@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Phone, MessageCircle } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -18,11 +18,43 @@ const faqVariants = {
   exit: { opacity: 0, y: -10, transition: { duration: 0.6, ease: "easeIn" } },
 };
 
+const faqContentVariants = {
+  open: {
+    opacity: 1,
+    height: "auto",
+    transition: { duration: 0.3, ease: "easeOut" },
+  },
+  closed: {
+    opacity: 0,
+    height: 0,
+    transition: { duration: 0.3, ease: "easeIn" },
+  },
+};
+
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Form submission logic would go here
+  const [openFaq, setOpenFaq] = useState(null); // Controla qual FAQ está aberto
+
+  const handleToggle = (index) => {
+    setOpenFaq(openFaq === index ? null : index); // Alterna entre abrir e fechar
   };
+
+  const faqs = [
+    {
+      question: "Como funcionam as sessões a domicílio?",
+      answer:
+        "Cecília Lívia Spa leva o conforto do spa até sua casa. Basta agendar a sessão e relaxar enquanto cuidamos de você.",
+    },
+    {
+      question: "Quais formas de pagamento são aceitas?",
+      answer:
+        "Aceitamos pagamentos em dinheiro, transferência/Pix e cartões de crédito/débito.",
+    },
+    {
+      question: "O que acontece se eu precisar cancelar?",
+      answer:
+        "Pedimos que o cancelamento ou remarcação seja feito com pelo menos 4 horas de antecedência para garantir o melhor atendimento.",
+    },
+  ];
 
   return (
     <section id="contact" className="section-padding">
@@ -119,57 +151,38 @@ const Contact = () => {
           </h4>
 
           <div className="space-y-4">
-            <motion.div
-              variants={faqVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-            >
-              <details className="border border-gray-300 p-4 rounded-lg">
-                <summary className="cursor-pointer font-medium text-lg">
-                  Como funcionam as sessões a domicílio?
-                </summary>
-                <p className="mt-2 text-foreground/70">
-                  Cecília Lívia Spa leva o conforto do spa até sua casa. Basta
-                  agendar a sessão e relaxar enquanto cuidamos de você.
-                </p>
-              </details>
-            </motion.div>
-
-            <motion.div
-              variants={faqVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-            >
-              <details className="border border-gray-300 p-4 rounded-lg">
-                <summary className="cursor-pointer font-medium text-lg">
-                  Quais formas de pagamento são aceitas?
-                </summary>
-                <p className="mt-2 text-foreground/70">
-                  Aceitamos pagamentos em dinheiro, transferência/Pix e cartões
-                  de crédito/débito.
-                </p>
-              </details>
-            </motion.div>
-
-            <motion.div
-              variants={faqVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-            >
-              <details className="border border-gray-300 p-4 rounded-lg">
-                <summary className="cursor-pointer font-medium text-lg">
-                  O que acontece se eu precisar cancelar?
-                </summary>
-                <p className="mt-2 text-foreground/70">
-                  Pedimos que o cancelamento ou remarcação seja feito com pelo
-                  menos 4 horas de antecedência para garantir o melhor
-                  atendimento.
-                </p>
-              </details>
-            </motion.div>
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                variants={faqVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+              >
+                <div className="border border-gray-300 p-4 rounded-lg">
+                  <div
+                    className="cursor-pointer font-medium text-lg flex justify-between items-center"
+                    onClick={() => handleToggle(index)}
+                  >
+                    {faq.question}
+                    <span>{openFaq === index ? "−" : "+"}</span>
+                  </div>
+                  <AnimatePresence>
+                    {openFaq === index && (
+                      <motion.div
+                        variants={faqContentVariants}
+                        initial="closed"
+                        animate="open"
+                        exit="closed"
+                        className="overflow-hidden"
+                      >
+                        <p className="mt-2 text-foreground/70">{faq.answer}</p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
